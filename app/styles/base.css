@@ -1,0 +1,38 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+  font-family: 'Raleway';
+}
+
+/* Estilos Buttom */
+.button-assistance {
+  color: white;
+  padding: 15px 0;
+  width: 100%;
+  border: 0;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+
+}
+
+.button-present {
+  background-color: #f7b617;
+}
+
+.button-miss {
+  background-color: #2b2b2b;
+}
+
+/* Estilos Header */
+.header {
+  background-color: #f7b617;
+}
+
+.header div {
+  padding: 20px;
+}
+
+.header img {
+  width: 100%;
+}
