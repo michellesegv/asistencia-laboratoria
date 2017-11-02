@@ -1,24 +1,16 @@
-/* Acá se creará el componente de la hora */
 import React from 'react'
-import PropTypes from 'prop-types'
+import Clock from 'react-live-clock'
 
-const Hour = ({ city, hours, minutes }) => {
+const Hour = (_) => {
   return (
     <div className='container-fluid'>
       <div className='row'>
-        <div className='col-xs-6 col-md-3 col-lg-2'>
-          <h2>{city}</h2>
-          <p><span>{hours}</span><span>:</span><span>{minutes}</span></p>
+        <div className='col-xs-8 col-xs-offset-2 col-md-2 col-md-offset-5 text-center'>
+          <Clock className="hour" format={'HH:mm:ss'} ticking={true} timezone={'America/Lima'} />
         </div>
       </div>
     </div>
   )
-};
-
-Hour.propTypes = {
-  city: PropTypes.string.isRequired,
-  hours: PropTypes.number.isRequired,
-  minutes: PropTypes.number.isRequired
 };
 
 export default Hour
