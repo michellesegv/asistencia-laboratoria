@@ -1,1 +1,21 @@
-/* Acá se creará el componente del header, este componente se utilizará para las dos vistas: login y registro de asistencia */
+import React from 'react'
+import PropTypes from 'prop-types'
+
+const Header = ({ src, alt }) => {
+  return (
+    <div className='container-fluid'>
+      <div className="row header">
+        <div className='col-xs-6 col-sm-6 col-md-3 col-lg-2'>
+          <img src={src} alt={alt}/>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+Header.propTypes = {
+  src: PropTypes.string.isRequired,
+  alt: PropTypes.string.isRequired
+}
+
+export default Header

@@ -1,0 +1,17 @@
+/* Estilos generales */
+* {
+  box-sizing: border-box;
+}
+
+/* Estilos Header */
+.header {
+  background-color: #f7b617;
+}
+
+.header div {
+  padding: 20px;
+}
+
+.header img {
+  width: 100%;
+}
