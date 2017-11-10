@@ -1,4 +1,4 @@
-import './styles/base.css'
+import './base.css'
 import React from 'react'
 import { render } from 'react-dom'
 import PropTypes from 'prop-types'

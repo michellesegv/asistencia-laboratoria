@@ -1,7 +1,7 @@
 const { resolve } = require('path')
 
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -12,6 +12,7 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
+  /*Solo sirve para development*/
   devServer: {
     contentBase: resolve(__dirname, 'public'),
   },
