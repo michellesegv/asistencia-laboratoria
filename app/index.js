@@ -12,7 +12,24 @@ import store from './config/store'
 const App = () => {
 	return (
 		<Provider store={store}>
-			<!-- Aquí debería ir el componente base -->
+			<div className="container-fluid padding-0">
+
+				<Header
+					src="http://i65.tinypic.com/2lwrbwx.png"
+					alt="Laboratoria"
+					/>
+				<Hour/>
+
+				<Button
+					assistance="present"
+					text="Presente! :)"
+					/>
+				<Button
+					assistance="miss"
+					text="Voy a faltar :("
+					/>
+
+			</div>
 		</Provider>
 	)
 }
