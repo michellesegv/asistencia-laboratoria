@@ -1,0 +1,2 @@
+export const SIGN_IN_CONFIRM = 'SIGN_IN_CONFIRM'
+export const MARK_ASSISTANCE = 'MARK_ASSISTANCE'
