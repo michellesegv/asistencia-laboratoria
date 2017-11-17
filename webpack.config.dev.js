@@ -4,12 +4,11 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OpenBrowserWebpackPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
-  entry: [
-    './app/index.js'
-  ],
+  context:  resolve(__dirname, 'app'),
+  entry: './index.js',
   output: {
     path: resolve(__dirname, 'public'),
-    publicPath: '/',
+    publicPath: '',
     filename: 'bundle.js',
   },
   /*Solo sirve para development*/
@@ -44,7 +43,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: resolve(__dirname, 'public', 'index.html'),
+      template: resolve(__dirname, 'app', 'index.html'),
       filename: 'index.html'
     }),
     new OpenBrowserWebpackPlugin({

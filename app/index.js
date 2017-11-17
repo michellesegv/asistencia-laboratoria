@@ -12,25 +12,27 @@ import store from './config/store'
 import LogOut from './components/LogOut';
 
 const state = {
-  page: 2
+  page: 0
 }
+
 
 const App = () => {
 
    if(state.page === 0) {
+
     return (
       <Provider store={store}>
         <div>
           <Header
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
-          />
+            />
 
           <ContainerForm/>
           <Button
             assistance="present"
             text="Ingresar"
-          />
+            />
 
         </div>
       </Provider>
@@ -45,17 +47,17 @@ const App = () => {
           <Header
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
-          />
+            />
           <Hour/>
 
           <Button
             assistance="present"
             text="Presente! :)"
-          />
+            />
           <Button
             assistance="miss"
             text="Voy a faltar :("
-          />
+            />
 
         </div>
       </Provider>
@@ -82,110 +84,12 @@ const App = () => {
      )
   }
 }
-/*
-const App = () => {
-	if (state.pages == null) {
-    return(
-      <div>
-        <Header
-          src="http://i65.tinypic.com/2lwrbwx.png"
-          alt="Laboratoria"
-        />
-
-        <ContainerForm/>
-        <Button
-          assistance="login"
-          text="Ingresar"
-        />
-
-      </div>
-    )
-	} else if(state.pages === 1) {
-    return (
-      <div className="container-fluid padding-0">
-
-        <Header
-          src="http://i65.tinypic.com/2lwrbwx.png"
-          alt="Laboratoria"
-        />
-        <Hour/>
-
-        <Button
-          assistance="present"
-          text="Presente! :)"
-        />
-        <Button
-          assistance="miss"
-          text="Voy a faltar :("
-        />
-
-      </div>
-    )
-  }
-};
-*/
-
-
-/*const App = () => {
-	return (
-		<Provider store={store}>
-			<!-- Aquí debería ir el componente base -->
-		</Provider>
-	)
-}*/
-
-
-
-/*render(
-	<App />,
-	document.getElementById('root')
-)*/
-
-/*const App = (_) => {
-  return (
-  	<div className="container-fluid padding-0">
-
-			<Header
-				src="http://i65.tinypic.com/2lwrbwx.png"
-				alt="Laboratoria"
-			/>
-			<Hour/>
-
-			<Button
-				assistance="present"
-				text="Presente! :)"
-			/>
-			<Button
-				assistance="miss"
-				text="Voy a faltar :("
-			/>
-
-		</div>
-  )
-}*/
-/*const inputs = (_) => {
-  return(
-  <div>
-	  <InputData
-	    text="Email address"
-	    typeInput="email"
-	    id="emailUser"
-	    placeholder="Email"
-	  />
-	  <InputData
-	    text="Password"
-	    typeInput="password"
-	    id="passwordUser"
-	    placeholder="Password"
-	  />
-  </div>
-)}*/
-
 
 render(
-  <App />,
+  <App state = {state} />,
   document.getElementById('root')
 )
+
 
 /* Para pintar asistencia */
 
