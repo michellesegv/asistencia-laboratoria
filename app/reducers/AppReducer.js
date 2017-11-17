@@ -4,7 +4,7 @@ import {
 } from '../actions/types'
 
 /* Deberíamos traer la data del json y almacenarlo en una variable (USERS) */
-let USERS = [];
+
 
 const INITIAL_STATE = {
   // Hacer algo similar
@@ -12,10 +12,6 @@ const INITIAL_STATE = {
   filterText: '', // texto que ingresa el usuario para buscar
   inStockOnly: false, // valor del checkbox de stock only
   filteredProducts: PRODUCTS, // inicialmente no hay ningun filtro*/
-  originalUsers: USERS,
-  filterText: '',
-  filteredUsers: USERS,
-  inStockOnly: false,
 }
 
 export default (state = INITIAL_STATE, action) => {
@@ -27,7 +23,7 @@ export default (state = INITIAL_STATE, action) => {
         filterText: action.payload
       }
       break
-    case MARK_ASSISTANCE:
+      case MARK_ASSISTANCE:
       newState = {
         ...state,
         inStockOnly: action.payload
@@ -35,21 +31,6 @@ export default (state = INITIAL_STATE, action) => {
       break
       default:
       return state
-  }
-  if (action.type == SIGN_IN_CONFIRM){
-    const filteredUsers = state.originalUsers.filter((users) => {
-      const filterText =
-        action.type == SIGN_IN_CONFIRM ?
-          action.payload.trim() :
-          state.filterText.trim()
-      return (
-        (users.name.match(new RegExp(filterText, 'ig')))
-      )
-    })
-    newState = {
-      ...newState,
-      filteredUsers
-    }
   }
   // Usar esta parte, adaptar a nuestra aplicación
   /*if (action.type === FILTER_TEXT_CHANGED || action.type === IN_STOCK_ONLY_CHANGED) {
