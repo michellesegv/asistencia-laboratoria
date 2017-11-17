@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 const InputData = ({ text, typeInput, id, placeholder }) => {
   return (
-    <div className="input">
+    <div className='input'>
       <label htmlFor={id}>{text}</label>
-      <input type={typeInput} id={id} placeholder={placeholder} className="form-control"/>
+      <input type={typeInput} id={id} placeholder={placeholder} className='form-control' />
     </div>
   )
 };
@@ -14,8 +14,8 @@ const InputData = ({ text, typeInput, id, placeholder }) => {
 InputData.propTypes = {
   text: PropTypes.string.isRequired,
   typeInput: PropTypes.string.isRequired,
-  placeholder: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  placeholder: PropTypes.string.isRequired
 }
 
 export default InputData
