@@ -5,11 +5,15 @@ import { Provider } from 'react-redux'
 import PropTypes from 'prop-types'
 import Button from './components/Button'
 import ContainerForm from './components/ContainerForm'
+import Course from './components/Course'
 import Header from './components/Header'
 import Hour from './components/Hour'
 import InputData from './components/InputData'
+import LogOut from './components/LogOut'
+import Message from './components/Message'
+import Profile from './components/Profile'
+import Success from './components/Success'
 import store from './config/store'
-import LogOut from './components/LogOut';
 
 const state = {
   page: 0
@@ -27,18 +31,71 @@ const App = () => {
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
             />
-
           <ContainerForm/>
           <Button
             assistance="present"
             text="Ingresar"
             />
 
+          <Header
+            src="http://i65.tinypic.com/2lwrbwx.png"
+            alt="Laboratoria"
+          />
+          <Success
+            user='Kenneth'
+          />
+          <Button
+            assistance="present"
+            text="Marca tu asistencia"
+          />
+
+          <Header
+            src="http://i65.tinypic.com/2lwrbwx.png"
+            alt="Laboratoria"
+          />
+          <Course/>
+          <Message/>
+          <Button
+            assistance="miss"
+            text="Entiendo"
+          />
+
+          <Header
+            src="http://i65.tinypic.com/2lwrbwx.png"
+            alt="Laboratoria"
+          />
+          <Profile
+            name='Kenneth'
+          />
+          <Hour/>
+          <Button
+            assistance="present"
+            text="Presente! :)"
+          />
+          <Button
+            assistance="miss"
+            text="Voy a faltar :("
+          />
+
+          <Header
+            src="http://i65.tinypic.com/2lwrbwx.png"
+            alt="Laboratoria"
+          />
+          <LogOut/>
+          <Button
+            assistance="present"
+            text="Ingresa de nuevo"
+          />
+
         </div>
+
+
+
+
       </Provider>
     );
 
-  } else if (state.page === 1) {
+  } /*else if (state.page === 1) {
      console.log(state.page);
     return (
       <Provider store={store}>
@@ -82,7 +139,7 @@ const App = () => {
          </div>
        </Provider>
      )
-  }
+  }*/
 }
 
 render(

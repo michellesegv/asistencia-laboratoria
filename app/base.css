@@ -62,3 +62,16 @@
   box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
   border: 1px solid #f7b617; 
 }
+
+.btn {
+  margin-bottom: 20px;
+}
+
+.name-user {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.mg-20 {
+  margin: 20vh;
+}
