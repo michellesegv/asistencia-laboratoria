@@ -9,13 +9,15 @@ import Header from './components/Header'
 import Hour from './components/Hour'
 import InputData from './components/InputData'
 import store from './config/store'
+import LogOut from './components/LogOut';
 
 const state = {
-  page: 0
+  page: 2
 }
 
 const App = () => {
-  if(state.pages === 0) {
+
+   if(state.page === 0) {
     return (
       <Provider store={store}>
         <div>
@@ -26,14 +28,16 @@ const App = () => {
 
           <ContainerForm/>
           <Button
-            assistance="login"
+            assistance="present"
             text="Ingresar"
           />
 
         </div>
       </Provider>
-    )
-  } else {
+    );
+
+  } else if (state.page === 1) {
+     console.log(state.page);
     return (
       <Provider store={store}>
         <div className="container-fluid padding-0">
@@ -56,6 +60,26 @@ const App = () => {
         </div>
       </Provider>
     )
+  } else {
+     return (
+       <Provider store={store}>
+         <div>
+           <Header
+             src="http://i65.tinypic.com/2lwrbwx.png"
+             alt="Laboratoria"
+           />
+
+           <LogOut/>
+
+           <Button
+             assistance="present"
+             text="Ingresa de nuevo"
+           />
+
+
+         </div>
+       </Provider>
+     )
   }
 }
 /*
@@ -202,3 +226,4 @@ render(
   </Provider>,
   document.getElementById('root')
 )*/
+
