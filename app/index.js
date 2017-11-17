@@ -30,16 +30,19 @@ const App = () => {
           <Header
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
+            idHd='Principal'
             />
           <ContainerForm/>
           <Button
             assistance="present"
             text="Ingresar"
+            idBtn='#page-2'
             />
 
           <Header
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
+            idHd='page-2'
           />
           <Success
             user='Kenneth'
@@ -47,22 +50,26 @@ const App = () => {
           <Button
             assistance="present"
             text="Marca tu asistencia"
+            idBtn='#page-3'
           />
 
           <Header
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
+            idHd='page-3'
           />
           <Course/>
           <Message/>
           <Button
             assistance="miss"
             text="Entiendo"
+            idBtn='#page-4'
           />
 
           <Header
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
+            idHd='page-4'
           />
           <Profile
             name='Kenneth'
@@ -71,20 +78,24 @@ const App = () => {
           <Button
             assistance="present"
             text="Presente! :)"
+            idBtn='#page-5'
           />
           <Button
             assistance="miss"
             text="Voy a faltar :("
+            idBtn='#page-5'
           />
 
           <Header
             src="http://i65.tinypic.com/2lwrbwx.png"
             alt="Laboratoria"
+            idHd='page-5'
           />
           <LogOut/>
           <Button
             assistance="present"
             text="Ingresa de nuevo"
+            idBtn='#Principal'
           />
 
         </div>
